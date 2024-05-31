@@ -9,9 +9,9 @@ pub struct InstantiateMsg {
 #[cw_serde]
 pub enum ExecuteMsg {
     SetToken {token_address: Addr},
-    SetAPR {amount : Uint128},
-    Stake{amount : Uint128},
-    WithDraw{amount : Uint128},
+    SetAPR {amount : u64},
+    Stake{amount : u64, sender : Addr},
+    WithDraw{amount : u64, sender : Addr},
 }
 
 #[cw_serde]
